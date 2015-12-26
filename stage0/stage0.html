@@ -5,11 +5,118 @@
 </head>
 <body>
   <h1>Udacity - Intro to Programming Nanodegree</h1>
+  <img src="http://lh3.googleusercontent.com/fa733-DxkXpEOz23x-xvZ_qX42HrOM2MOwqwKwjSs7v6ptZ6Emaf8R3HijCU3NGPfD4bv_EGwayuZ3iKv0A=s0" alt="Intro to Programming Nanodegree program icon" height="200" width="300">
   <h2>Stage0: Getting Started with HTML</h2>
   <h3>Understanding the Web</h3>
   <p>
-    In it's simplest form the World Wide Web (WWW) is simply a
-    collection of hyperlinked HTML documents.
+    In it's simplest form the World Wide Web (WWW) is a collection of
+    hyperlinked HTML documents. There are several components of the web which
+    are required for it to function including, you and your hardware and a
+    browser, the internet and severs. The browser sends HTTP requests to servers
+    via the internet which then send back files in response, these files are
+    interpretted and displayed by your browser.
   </p>
+  <h3>HTML</h3>
+  <p>
+    HTML, which stands for HyperText Markup Language, documentsare are the
+    heart of the web and tell browsers what pages should look like. These
+    documents are written in a text language that browsers can interpret to
+    create webpages, links to other pages, embed media and make it possible to
+    create the web as we know it.
+  </p>
+  <h3>The Markup Language</h3>
+  <p>
+    The markup language is made up of tags which define the proporties of an
+    element. The majority of tags contain an opening and closing tag, with the
+    content between these taking on the properties defined by the tag. The
+    properties of a tag are determined by it's name, for instance, to create
+    text that is <b>bold</b>, it is wrapped by tags which specify that the text
+    should be bold: e.g. <<span style="color:blue">b</span>>CONTENTS<<span style="color:blue">/b</span>>. Where the tag name = b and defines that
+    the contents should be bold. You will notice that the closing tag has a
+    forward slash '/' before the tag name, this is to distinguish between
+    opening and closing tags. There are lots of different tags, each of which
+    defines a different property some of which include:
+    <ul>
+      <li>
+        <h1 style="display:inline">Header 1</h1> to <h6 style="display:inline">Header 6</h6>  = <<span style="color:blue">hX</span>>
+      </li>
+      <li>
+        <em>Emphasis</em> = <<span style="color:blue">em</span>>
+      </li>
+      <li>
+        <p style="display:inline">Paragraph</p> = <<span style="color:blue">p</span>>
+      </li>
+    </ul>
+
+    There are also a small number of tags which don't have a closing tag because
+    they don't contain content. An example of this is the <<span style="color:blue">br</span>> tag which specifies when a line break should
+    occur.
+
+    When a mistake occurs in code it can be easy to want to blame the computer
+    for not doing what you want, however, keep in mind that computers are
+    'stupid' in the sense that they will only ever do what they are told. So if
+    a big occurs it will be a mistake that you have accidently written (or not
+    written) into the code.
+  </p>
+  <h3>Attributes</h3>
+  <p>
+    Tags can also contain attributes, with the value of the attribute defin or additional properties of the content of the tag. This is best highlighted using
+    the tag for creating hypelinks because it always requires a specific attribute.
+    The tag is <<spanstyle="color:blue">a</span> href="LINK">CONTENTS</<span style="color:blue">a</span>>. As you can see this tag includes an attribute,
+    <b>href=</b>, in the opening tag. The href attribute specifies the URL of the
+    page that the link will go to, with the contents being set up as a link. There
+    is a good explaination this tag at <a href="http://www.w3schools.com/tags/att_a_href.asp">W3Schools</a>.
+
+    Another example of a tag which reqires attributes is the <<span>img</span>>
+    tag which makes it possible to include images on a webpage. This tag requires
+    two standard attributes <b>src=</b>, which indicates the location of the
+    image to be used, and <b>alt=</b>, which specifies text to display if the src
+    link is broken. The image tag is another example of a tag without a closing tag
+    because it doesn't require content.
+  </p>
+  <h3>Container Tags</h3>
+  <p>
+    Container tags are simply tags which do nothing but contain the content within
+    them, and which can be used to add style to content. Two container tags include,
+    <ul>
+      <li>
+        <<span style="color:blue">span</span>>, an inline tag; and
+      </li>
+      <li><<span style="color:blue">div</span>></li> a block tag.
+    </ul>
+    All tags have a predefined position type, which specifies whether they are
+    <em>inline</em> or <em>block</em>. This determines how the content within the
+    tag behaves in relationship to the elements around it, e.g. other tags. Inline
+    elements will sit next to one another on the same line, whereas, block elements
+    will cause a line break and sit below the preceeding element. Inline elements
+    include, <em>emphasis</em> and <b>bold</b>, which as you can see sit side by
+    side with other elements. While, paragraph and headingX, are block elements
+    which sit on their own lines.<br><br>
+    It is also important to note that any whitespace with HTML code is turned into
+    a single space. This includes multiple spaces and enters which will all be
+    turned into a single whitespace when rendered.
+  </p>
+  <h3>HTML Document Setup</h3>
+  <p>
+    To create a HTML document it must contain a few vital elements which include:
+    <ul>
+      <li>
+        <<span>!DOCTYPE HTML</span>> - defines what kind of html the document is.
+      </li>
+      <li>
+        <<span>HTML</span>> - Surrounds the entrie document
+        </li>
+      <li>
+        <<span>head</span>> - Contains metadata and other scripts like, CSS and Javascrip
+      </li>
+      <li>
+        <<span>title</span>> - The title of the page or the URL
+      </li>
+      <li>
+        <<span>body</span>> - Everything you actually see on the webpage.
+      </li>
+    </ul>
+  </p>
+
 </body>
 </html>
