@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Stage0-Notes</title>
+  <meta charset="utf-8">
 </head>
 <body>
   <h1>Udacity - Intro to Programming Nanodegree</h1>
@@ -31,25 +32,25 @@
     content between these taking on the properties defined by the tag. The
     properties of a tag are determined by it's name, for instance, to create
     text that is <b>bold</b>, it is wrapped by tags which specify that the text
-    should be bold: e.g. <<span style="color:blue">b</span>>CONTENTS<<span style="color:blue">/b</span>>. Where the tag name = b and defines that
+    should be bold: e.g. &lt;<span style="color:blue">b</span>&gt;CONTENTS&lt;<span style="color:blue">/b</span>&gt;. Where the tag name = b and defines that
     the contents should be bold. You will notice that the closing tag has a
     forward slash '/' before the tag name, this is to distinguish between
     opening and closing tags. There are lots of different tags, each of which
     defines a different property some of which include:
     <ul>
       <li>
-        <h1 style="display:inline">Header 1</h1> to <h6 style="display:inline">Header 6</h6>  = <<span style="color:blue">hX</span>>
+        <h1 style="display:inline">Header 1</h1> to <h6 style="display:inline">Header 6</h6>  = &lt;<span style="color:blue">hX</span>&gt;
       </li>
       <li>
-        <em>Emphasis</em> = <<span style="color:blue">em</span>>
+        <em>Emphasis</em> = &lt;<span style="color:blue">em</span>&gt;
       </li>
       <li>
-        <p style="display:inline">Paragraph</p> = <<span style="color:blue">p</span>>
+        <p style="display:inline">Paragraph</p> = &lt;<span style="color:blue">p</span>&gt;
       </li>
     </ul>
 
     There are also a small number of tags which don't have a closing tag because
-    they don't contain content. An example of this is the <<span style="color:blue">br</span>> tag which specifies when a line break should
+    they don't contain content. An example of this is the &lt;<span style="color:blue">br</span>&gt; tag which specifies when a line break should
     occur.
 
     When a mistake occurs in code it can be easy to want to blame the computer
@@ -62,12 +63,12 @@
   <p>
     Tags can also contain attributes, with the value of the attribute defin or additional properties of the content of the tag. This is best highlighted using
     the tag for creating hypelinks because it always requires a specific attribute.
-    The tag is <<spanstyle="color:blue">a</span> href="LINK">CONTENTS</<span style="color:blue">a</span>>. As you can see this tag includes an attribute,
+    The tag is &lt;<span style="color:blue">a</span> href="LINK">&gt;CONTENTS&lt;/<span style="color:blue">a</span>&gt;. As you can see this tag includes an attribute,
     <b>href=</b>, in the opening tag. The href attribute specifies the URL of the
     page that the link will go to, with the contents being set up as a link. There
     is a good explaination this tag at <a href="http://www.w3schools.com/tags/att_a_href.asp">W3Schools</a>.
 
-    Another example of a tag which reqires attributes is the <<span>img</span>>
+    Another example of a tag which reqires attributes is the &lt;<span>img</span>&gt;
     tag which makes it possible to include images on a webpage. This tag requires
     two standard attributes <b>src=</b>, which indicates the location of the
     image to be used, and <b>alt=</b>, which specifies text to display if the src
@@ -80,9 +81,11 @@
     them, and which can be used to add style to content. Two container tags include,
     <ul>
       <li>
-        <<span style="color:blue">span</span>>, an inline tag; and
+        &lt;<span style="color:blue">span</span>&gt;, an inline tag; and
       </li>
-      <li><<span style="color:blue">div</span>></li> a block tag.
+      <li>
+        &lt;<span style="color:blue">div</span>&gt; a block tag.
+      </li>
     </ul>
     All tags have a predefined position type, which specifies whether they are
     <em>inline</em> or <em>block</em>. This determines how the content within the
@@ -101,21 +104,41 @@
     To create a HTML document it must contain a few vital elements which include:
     <ul>
       <li>
-        <<span>!DOCTYPE HTML</span>> - defines what kind of html the document is.
+        &lt;<span>!DOCTYPE HTML</span>&gt; - defines what kind of html the document is.
       </li>
       <li>
-        <<span>HTML</span>> - Surrounds the entrie document
+        &lt;<span>HTML</span>&gt; - Surrounds the entrie document
         </li>
       <li>
-        <<span>head</span>> - Contains metadata and other scripts like, CSS and Javascrip
+        &lt;<span>head</span>&gt; - Contains metadata and other scripts like, CSS and Javascrip
       </li>
       <li>
-        <<span>title</span>> - The title of the page or the URL
+        &lt;<span>title</span>&gt; - The title of the page or the URL
       </li>
       <li>
-        <<span>body</span>> - Everything you actually see on the webpage.
+        &lt;meta charset="utf-8"&gt; - Identifies the
+      </li>
+      <li>
+        &lt;<span>body</span>&gt; - Everything you actually see on the webpage.
       </li>
     </ul>
+  </p>
+  <h3>Feedback</h3>
+  <p>
+    After submitting this page for review I received some great feedback which
+    taught me something new. When trying to show HTML code within a HTML document
+    special entity syntax must be used, which can be found under <a href="http://www.w3schools.com/html/html_entities.asp">HTML entities</a> on
+    W3School. An example of these include:
+    <xmp>
+      &lt;, for 'less than'
+      &lt;, for 'greater than'
+    </xmp>
+
+    In order to display the text of these HTML entities as an example, as above,
+    in an they must be contained within &lt;xmp&gt;CONTENT&lt;/xmp&gt; tags. There
+    is some controversy over the use of the &lt;xmp&gt; tag, but a <a href="https://stackoverflow.com/questions/16783708/how-to-display-raw-html-code-in-pre-or-something-like-it-but-without-escaping-it/16784925#16784925">stack overflow
+    thread</a> discusses the problems and solutions for displaying HTML code within
+    a HTML document.
   </p>
 
 </body>
