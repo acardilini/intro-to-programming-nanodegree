@@ -92,3 +92,6 @@ to do this is to give each element a class attribute which distinguishes it's
 purpose. CSS can then be used to style each of the different divs depending on
 the class. It's important to make each class attribute meaningful to the div that
 it identifies so that you recognise what it is at a later date.
+
+### Work Session 1
+Summarise my notes on section 1.2 and add them to my previous notes from stage0.
