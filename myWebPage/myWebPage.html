@@ -9,118 +9,151 @@
     <h1>Udacity - Intro to Programming Nanodegree</h1>
     <img src="http://lh3.googleusercontent.com/fa733-DxkXpEOz23x-xvZ_qX42HrOM2MOwqwKwjSs7v6ptZ6Emaf8R3HijCU3NGPfD4bv_EGwayuZ3iKv0A=s0" alt="Intro to Programming Nanodegree program icon" height="200" width="300">
   </div>
+
+
   <div class="lesson">
-    <div class="lesson-intro">
-      <h2>Stage0: Getting Started with HTML</h2>
+    <div class="lesson-title">
+      <h2>1.1 The Basics of the Web and HTML</h2>
+    </div>
+    <div class="lesson-description">
       <p>
-        This section also acts as Stage 1, <em>1.1 The Basics of the Web and HTML</em>
+        This section also acts as Stage 1, <em></em>
       </p>
     </div>
     <div class="concept">
-      <h3>Understanding the Web</h3>
-      <p>
-        In it's simplest form the World Wide Web (WWW) is a collection of
-        hyperlinked HTML documents. There are several components of the web which
-        are required for it to function including, you and your hardware and a
-        browser, the internet and severs. The browser sends HTTP requests to servers
-        via the internet which then send back files in response, these files are
-        interpretted and displayed by your browser.
-      </p>
+      <div class="concept-tile">
+        <h3>Understanding the Web</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          In it's simplest form the World Wide Web (WWW) is a collection of
+          hyperlinked HTML documents. There are several components of the web which
+          are required for it to function including, you and your hardware and a
+          browser, the internet and severs. The browser sends HTTP requests to servers
+          via the internet which then send back files in response, these files are
+          interpretted and displayed by your browser.
+        </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>HTML</h3>
-      <p>
-        HTML, which stands for HyperText Markup Language, documentsare are the
-        heart of the web and tell browsers what pages should look like. These
-        documents are written in a text language that browsers can interpret to
-        create webpages, links to other pages, embed media and make it possible to
-        create the web as we know it.
-      </p>
+      <div class="concept-title">
+        <h3>HTML</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          HTML, which stands for HyperText Markup Language, documentsare are the
+          heart of the web and tell browsers what pages should look like. These
+          documents are written in a text language that browsers can interpret to
+          create webpages, links to other pages, embed media and make it possible to
+          create the web as we know it.
+        </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>The Markup Language</h3>
-      <p>
-        The markup language is made up of tags which define the proporties of an
-        element. The majority of tags contain an opening and closing tag, with the
-        content between these taking on the properties defined by the tag. The
-        properties of a tag are determined by it's name, for instance, to create
-        text that is <b>bold</b>, it is wrapped by tags which specify that the text
-        should be bold: e.g. &lt;<span style="color:blue">b</span>&gt;CONTENTS&lt;<span style="color:blue">/b</span>&gt;. Where the tag name = b and defines that
-        the contents should be bold. You will notice that the closing tag has a
-        forward slash '/' before the tag name, this is to distinguish between
-        opening and closing tags. There are lots of different tags, each of which
-        defines a different property some of which include:
+      <div class="concept-title">
+        <h3>The Markup Language</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          The markup language is made up of tags which define the proporties of an
+          element. The majority of tags contain an opening and closing tag, with the
+          content between these taking on the properties defined by the tag. The
+          properties of a tag are determined by it's name, for instance, to create
+          text that is <b>bold</b>, it is wrapped by tags which specify that the text
+          should be bold: e.g. &lt;<span class="tag-name">b</span>&gt;CONTENTS&lt;<span class="tag-name">/b</span>&gt;.
+          Where the tag name = b and defines that
+          the contents should be bold. You will notice that the closing tag has a
+          forward slash '/' before the tag name, this is to distinguish between
+          opening and closing tags. There are lots of different tags, each of which
+          defines a different property some of which include:
+        </p>
         <ul>
           <li>
-            <h1 style="display:inline">Header 1</h1> to <h6 style="display:inline">Header 6</h6>  = &lt;<span style="color:blue">hX</span>&gt;
+            <h1 style="display:inline">Header 1</h1> to <h6 style="display:inline">Header 6</h6> = &lt;<span class="tag-name">hX</span>&gt;
           </li>
           <li>
-            <em>Emphasis</em> = &lt;<span style="color:blue">em</span>&gt;
+            <em>Emphasis</em> = &lt;<span class="tag-name">em</span>&gt;
           </li>
           <li>
-            <p style="display:inline">Paragraph</p> = &lt;<span style="color:blue">p</span>&gt;
+            <p style="display:inline">Paragraph</p> = &lt;<span class="tag-name">p</span>&gt;
           </li>
         </ul>
-
-        There are also a small number of tags which don't have a closing tag because
-        they don't contain content. An example of this is the &lt;<span style="color:blue">br</span>&gt; tag which specifies when a line break should
-        occur.
-
-        When a mistake occurs in code it can be easy to want to blame the computer
-        for not doing what you want, however, keep in mind that computers are
-        'stupid' in the sense that they will only ever do what they are told. So if
-        a big occurs it will be a mistake that you have accidently written (or not
-        written) into the code.
-      </p>
+        <p>
+          There are also a small number of tags which don't have a closing tag because
+          they don't contain content. An example of this is the &lt;<span class="tag-name">br</span>&gt; tag which specifies when a line break should occur.
+        </p>
+        <p>
+          When a mistake occurs in code it can be easy to want to blame the computer
+          for not doing what you want, however, keep in mind that computers are
+          'stupid' in the sense that they will only ever do what they are told. So if
+          a big occurs it will be a mistake that you have accidently written (or not
+          written) into the code.
+        </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>Attributes</h3>
-      <p>
-        Tags can also contain attributes, with the value of the attribute defin or additional properties of the content of the tag. This is best highlighted using
-        the tag for creating hypelinks because it always requires a specific attribute.
-        The tag is &lt;<span style="color:blue">a</span> href="LINK">&gt;CONTENTS&lt;/<span style="color:blue">a</span>&gt;. As you can see this tag includes an attribute,
-        <b>href=</b>, in the opening tag. The href attribute specifies the URL of the
-        page that the link will go to, with the contents being set up as a link. There
-        is a good explaination this tag at <a href="http://www.w3schools.com/tags/att_a_href.asp">W3Schools</a>.
-
-        Another example of a tag which reqires attributes is the &lt;<span>img</span>&gt;
-        tag which makes it possible to include images on a webpage. This tag requires
-        two standard attributes <b>src=</b>, which indicates the location of the
-        image to be used, and <b>alt=</b>, which specifies text to display if the src
-        link is broken. The image tag is another example of a tag without a closing tag
-        because it doesn't require content.
-      </p>
+      <div class="concept-title">
+        <h3>Attributes</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          Tags can also contain attributes, with the value of the attribute defin or additional properties of the content of the tag. This is best highlighted using
+          the tag for creating hypelinks because it always requires a specific attribute.
+          The tag is &lt;<span class="tag-name">a</span> href="LINK">&gt;CONTENTS&lt;/<span class="tag-name">a</span>&gt;. As you can see this tag includes an attribute,
+          <b>href=</b>, in the opening tag. The href attribute specifies the URL of the
+          page that the link will go to, with the contents being set up as a link. There
+          is a good explaination this tag at <a href="http://www.w3schools.com/tags/att_a_href.asp">W3Schools</a>.
+        </p>
+        <p>
+          Another example of a tag which reqires attributes is the &lt;<span class="tag-name">img</span>&gt;
+          tag which makes it possible to include images on a webpage. This tag requires
+          two standard attributes <b>src=</b>, which indicates the location of the
+          image to be used, and <b>alt=</b>, which specifies text to display if the src
+          link is broken. The image tag is another example of a tag without a closing tag
+          because it doesn't require content.
+        </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>Container Tags</h3>
-      <p>
-        Container tags are simply tags which do nothing but contain the content within
-        them, and which can be used to add style to content. Two container tags include,
+      <div class="concept-title">
+        <h3>Container Tags</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          Container tags are simply tags which do nothing but contain the content within
+          them, and which can be used to add style to content. Two container tags include,
+        </p>
         <ul>
           <li>
-            &lt;<span style="color:blue">span</span>&gt;, an inline tag; and
+            &lt;<span class="tag-name"></span></span>span</span>&gt;, an inline tag; and
           </li>
           <li>
-            &lt;<span style="color:blue">div</span>&gt; a block tag.
+            &lt;<span class="tag-name"></span>div</span>&gt; a block tag.
           </li>
         </ul>
-        All tags have a predefined position type, which specifies whether they are
-        <em>inline</em> or <em>block</em>. This determines how the content within the
-        tag behaves in relationship to the elements around it, e.g. other tags. Inline
-        elements will sit next to one another on the same line, whereas, block elements
-        will cause a line break and sit below the preceeding element. Inline elements
-        include, <em>emphasis</em> and <b>bold</b>, which as you can see sit side by
-        side with other elements. While, paragraph and headingX, are block elements
-        which sit on their own lines.<br><br>
-        It is also important to note that any whitespace with HTML code is turned into
-        a single space. This includes multiple spaces and enters which will all be
-        turned into a single whitespace when rendered.
-      </p>
+        <p>
+          All tags have a predefined position type, which specifies whether they are
+          <em>inline</em> or <em>block</em>. This determines how the content within the
+          tag behaves in relationship to the elements around it, e.g. other tags. Inline
+          elements will sit next to one another on the same line, whereas, block elements
+          will cause a line break and sit below the preceeding element. Inline elements
+          include, <em>emphasis</em> and <b>bold</b>, which as you can see sit side by
+          side with other elements. While, paragraph and headingX, are block elements
+          which sit on their own lines.<br><br>
+          It is also important to note that any whitespace with HTML code is turned into
+          a single space. This includes multiple spaces and enters which will all be
+          turned into a single whitespace when rendered.
+        </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>HTML Document Setup</h3>
-      <p>
-        To create a HTML document it must contain a few vital elements which include:
+      <div class="concept-title">
+        <h3>HTML Document Setup</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          To create a HTML document it must contain a few vital elements which include:
+        </p>
         <ul>
           <li>
             &lt;<span>!DOCTYPE HTML</span>&gt; - defines what kind of html the document is.
@@ -141,115 +174,147 @@
             &lt;<span>body</span>&gt; - Everything you actually see on the webpage.
           </li>
         </ul>
-      </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>Feedback</h3>
-      <p>
-        After submitting this page for review I received some great feedback which
-        taught me something new. When trying to show HTML code within a HTML document
-        special entity syntax must be used, which can be found under <a href="http://www.w3schools.com/html/html_entities.asp">HTML entities</a> on
-        W3School. An example of these include:
+      <div class="lesson-feedback-title">
+        <h3>Feedback</h3>
+      </div>
+      <div class="lesson-feedback-description">
+        <p>
+          After submitting this page for review I received some great feedback which
+          taught me something new. When trying to show HTML code within a HTML document
+          special entity syntax must be used, an explanation can be found at <a href="http://www.w3schools.com/html/html_entities.asp">HTML entities</a> on
+          W3School. An example of these include:
+        </p>
         <xmp>
           &lt;, for 'less than'
           &lt;, for 'greater than'
         </xmp>
-
-        In order to display the text of these HTML entities as an example, as above,
-        in an they must be contained within &lt;xmp&gt;CONTENT&lt;/xmp&gt; tags. There
-        is some controversy over the use of the &lt;xmp&gt; tag, but a <a href="https://stackoverflow.com/questions/16783708/how-to-display-raw-html-code-in-pre-or-something-like-it-but-without-escaping-it/16784925#16784925">stack overflow
-        thread</a> discusses the problems and solutions for displaying HTML code within
-        a HTML document.
-      </p>
+        <p>
+          In order to display the text of these HTML entities as an example, as above,
+          in an they must be contained within &lt;xmp&gt;CONTENT&lt;/xmp&gt; tags. There
+          is some controversy over the use of the &lt;xmp&gt; tag, but a <a href="https://stackoverflow.com/questions/16783708/how-to-display-raw-html-code-in-pre-or-something-like-it-but-without-escaping-it/16784925#16784925">stack overflow
+          thread</a> discusses the problems and solutions for displaying HTML code within
+          a HTML document.
+        </p>
+      </div>
     </div>
-  </div>
+  </div> <!--END OF LESSON 1-->
+
+
   <div class="lesson">
     <div class="lesson-intro">
-      <h2>Stage 1: 1.2 Creating a Structured Document</h2>
-      <p>
-        This lesson focuses on developing an understanding of how a HTML document is structured and how web
-        browsers interpret that structure. It also goes through the purpose of HTML,
-        CSS and DOM.
-      </p>
-      <p>
-        <b>Why start learning programming with front-end web development?</b><br>Understanding
-        front end web dev is one of the few areas of programming that is visual, which
-        allows new students to immediately see the effects of their programming. This is
-        a good feedback mechanism for beginner programmers who are just starting to learn.
-        It's also an easy way to share what you are creating, which allows you to show
-        off your skills to others easily and get feedback.
-      </p>
+      <div class="lesson-title">
+        <h2>1.2 Creating a Structured Document</h2>
+      </div>
+      <div class="lesson-description">
+        <p>
+          This lesson focuses on developing an understanding of how a HTML document is structured and how web
+          browsers interpret that structure. It also goes through the purpose of HTML,
+          CSS and DOM.
+        </p>
+        <p>
+          <b>Why start learning programming with front-end web development?</b><br>Understanding
+          front end web dev is one of the few areas of programming that is visual, which
+          allows new students to immediately see the effects of their programming. This is
+          a good feedback mechanism for beginner programmers who are just starting to learn.
+          It's also an easy way to share what you are creating, which allows you to show
+          off your skills to others easily and get feedback.
+        </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>Concepts of Webpage Structure</h3>
-      <p>
-        Having a conceptual understanding of how the different components of a webpage
-        work will help translate visual designs into webpages. HTML provides the
-        structure of a page, whereas CSS defines the style of the house, such as
-        the colouring and decoration. Browsers build a branching tree-like structure
-        of the page, which represents the association between different elements.
-      </p>
+      <div class="concept-title">
+        <h3>Concepts of Webpage Structure</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          Having a conceptual understanding of how the different components of a webpage
+          work will help translate visual designs into webpages. HTML provides the
+          structure of a page, whereas CSS defines the style of the house, such as
+          the colouring and decoration. Browsers build a branching tree-like structure
+          of the page, which represents the association between different elements.
+        </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>Inspecting the Web</h3>
-      <p>
-        Many web browsers have development tools that allow you to inspect the structure
-        and underlying code that defines a webpage. You can use google chromes development tools
-        by right clicking anywhere on a webpage and selecting 'inspect'. This shows both
-        HTML and CSS style, and can be directly interacted with to see how changes
-        effect the webpage.
-      </p>
+      <div class="concept-title">
+        <h3>Inspecting the Web</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          Many web browsers have development tools that allow you to inspect the structure
+          and underlying code that defines a webpage. You can use google chromes development tools
+          by right clicking anywhere on a webpage and selecting 'inspect'. This shows both
+          HTML and CSS style, and can be directly interacted with to see how changes
+          effect the webpage.
+        </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>A Webpage Trinity (HTML-CSS-DOM)</h3>
-      <p>
-        HTML and CSS are both language of the web with a specific syntax and sets of rules. The basic word in
-        the HTML language is 'tag', which browsers turn into elements that form a tree
-        (or DOM). The Document Object Model (DOM) is a standard way of representing and
-        interacting with HTML tags, and the tree that is seen in a browsers dev tool is
-        actually a DOM. Each HTML tag creates an element in the DOM which the browser
-        use to create the webpage. The HTML document identifies what CSS
-        stylesheet that should be used to style the webpage.
-      </p>
-      <p>
-        With a good understand of both HTML and CSS languages it is possible to
-        look at a page and see how it can be broken down into it's different
-        elements, or how a page might be built.
-      </p>
+      <div class="concept-title">
+        <h3>A Webpage Trinity (HTML-CSS-DOM)</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          HTML and CSS are both language of the web with a specific syntax and sets of rules. The basic word in
+          the HTML language is 'tag', which browsers turn into elements that form a tree
+          (or DOM). The Document Object Model (DOM) is a standard way of representing and
+          interacting with HTML tags, and the tree that is seen in a browsers dev tool is
+          actually a DOM. Each HTML tag creates an element in the DOM which the browser
+          use to create the webpage. The HTML document identifies what CSS
+          stylesheet that should be used to style the webpage.
+        </p>
+        <p>
+          With a good understand of both HTML and CSS languages it is possible to
+          look at a page and see how it can be broken down into it's different
+          elements, or how a page might be built.
+        </p>
+      </div>
     </div>
     <div class="concept">
-      <h3>Boxes, Boxes Everywhere!</h3>
-      <p>
-        Every element on a webpage is a box, even circles are boxes! CSS can be used
-        to style elements, such as coloured boxes, and make the look like circles, e.g.
-        'border-radius'. However, the element is still fundamentally a box, its just
-        that it's style has been changed.
-      </p>
-      <p>
-        Thinking about the elements of a website in terms of boxes makes it simple to
-        organise and rearrange webpages. It allows you to think about a webpage in
-        terms of a grid, and identify where each element will be placed within that grid.
-      </p>
-      <p>
-        When you are given a mock design, it can helpful to boxify the design by drawing
-        boxes around the different elements you have identified.
-      </p>
-      <p>
-        Boxes are defined by &lt;div&gt; tags. When creating a new webpage, start by
-        setting up all of the boxes/div tags you need. To be able to apply style
-        to your divs, e.g. size and location, it is helpful to give each element
-        a class attribute which distinguishes it's purpose. CSS can then be used
-        to style each of the different divs depending on its class. It's important
-        to make each class attribute meaningful to the div that it identifies so
-        that you recognise what it is at a later date.
-      </p>
+      <div class="concept-title">
+        <h3>The Web is Full of Boxes!</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          Every element on a webpage is a box, even circles are boxes! CSS can be used
+          to style elements, such as coloured boxes, and make the look like circles, e.g.
+          'border-radius'. However, the element is still fundamentally a box, its just
+          that it's style has been changed.
+        </p>
+        <p>
+          Thinking about the elements of a website in terms of boxes makes it simple to
+          organise and rearrange webpages. It allows you to think about a webpage in
+          terms of a grid, and identify where each element will be placed within that grid.
+        </p>
+        <p>
+          When you are given a mock design, it can helpful to boxify the design by drawing
+          boxes around the different elements you have identified.
+        </p>
+        <p>
+          Boxes are defined by &lt;div&gt; tags. When creating a new webpage, start by
+          setting up all of the boxes/div tags you need. To be able to apply style
+          to your divs, e.g. size and location, it is helpful to give each element
+          a class attribute which distinguishes it's purpose. CSS can then be used
+          to style each of the different divs depending on its class. It's important
+          to make each class attribute meaningful to the div that it identifies so
+          that you recognise what it is at a later date.
+        </p>
+      </div>
     </div>
-    <div class="concept">
-      <h3>Expert Tips</h3>
-      <p>
-        <b>Jacques Favreau</b> - Front End Developer (Udacity)
-        Jacques provided the following tips for thinking about the boxes within
-        a webpage:
+    <div class="expert-tips">
+      <div class="expert-tips-title">
+        <h3>Expert Tips</h3>
+        <img src="" alt=""> <!-- TODO: get photo of Jacques -->
+      </div>
+      <div class="expert-tips-description">
+        <p>
+          <b>Jacques Favreau</b> - Front End Developer (Udacity)
+          Jacques provided the following tips for thinking about the boxes within
+          a webpage:
+        </p>
         <ul>
           <li>
             Everything on the web is boxes, so starts with cutting the design into boxes.
@@ -261,8 +326,130 @@
             Start with big boxes and works into the smaller boxes after you have idnetified the big ones.
           </li>
         </ul>
-      </p>
+      </div>
+    </div>
+  </div> <!--END OF LESSON 2-->
+
+
+  <div class="lesson">
+    <div class="lesson-intro">
+      <div class="lesson-title">
+        <h2>1.3 Adding CSS Style and HTML Structure</h2>
+      </div>
+      <div class="lesson-description">
+        <p>
+          In this lesson we learn how to use CSS code to add style to a webpage.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        <h3>The Basics of Style</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          There are several ways to add style to a HTML document including directly
+          within each tag, between &lt;style&gt; tags in the &lt;head&gt; of the
+          head of the HTML doc, or by using a CSS stylesheet.
+        </p>
+        <p>
+          Using a CSS reduces the amount of repitive coding that needs to be done
+          because it can be linked to many pages at once, and one change could lead
+          to changes in many documents. For example, if you style was between &lt;style&gt;
+          across multiple webpages you would need to change every webpage seperately,
+          however with CSS you only have to change it once in a single CSS file that is linked
+          to all of the pages!
+        </p>
+        <p>
+          Your HTML document is linked to a CSS document by including a
+          &lt;link rel="stylesheet" type="text/css" href="LINK"&gt; tag, between
+          the &lt;head&gt; tags of your HTML.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        <h3>Understanding CSS</h3>
+      </div>
+      <div class="concept-description">
+        <p>
+          CSS stands for Cascading Style Sheets. Multiple CSS can be linked to a single
+          HTML document, with the most specific rules applying the style
+          to the webpage. That is, there can be multple rules which govern how an
+          element should be styled but it is the <b>most specific</b> rule that
+          <b>is</b> applied. An <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Inheritance">Inheritance</a>
+          mechanisms helps determine what styling is applied to elements of
+          a HTML document, with descendants of an element, i.e. tags
+          nested in other tags, inheriting the style of their ancestor elements.
+          The inheritance mechanism relies on the tree-like structure of the DOM
+          to determine styling for descendants. The style applied directly to
+          a descendant overrides the style inherited from an ancestor, i.e. the
+          <b>most specific</b> rule is applied.
+        </p>
+        <p>
+          CSS starts with a selector, which identifies what elements to apply
+          the style to. Selectors can be tag names, and will apply to all elements
+          of that tag, or can be more specific and target elements of a specific
+          class. CSS syntax follows this simple structure:
+        </p>
+        <pre>
+          SELECTOR {
+            ATTRIBUTE: VALUE;
+          }
+        </pre>
+        <p>
+          CSS-Tricks (which is a great website and youtube channel), provides a good
+          introduction to <a href="https://css-tricks.com/how-css-selectors-work/">CSS-Selectors</a>
+          which is well worth checking out. There are also LOTS of different
+          attributes that can be specified to style HTML elements. Mozilla has
+          a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS reference</a>
+          page that provides information about lots of these attributes and the
+          values that can be applied to them. It is important to note that there
+          are often several ways of defining the value of an attribute.
+        </p>
+      </div>
+    </div>
+    <div class="expert-tips">
+      <div class="expert-tips-title">
+        <h3>Expert-Tips</h3>
+      </div>
+      <div class="expert-tips-description">
+        
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        <h3>The Box Model</h3>
+      </div>
+      <div class="concept-description"></div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        <h3>Flexible Possitioning</h3>
+      </div>
+      <div class="concept-description"></div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        <h3>From Design to Webpage</h3>
+      </div>
+      <div class="concept-description"></div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        <h3>Verification</h3>
+      </div>
+      <div class="concept-description"></div>
+    </div>
+    <div class="tidbits">
+      <div class="tidbits-title">
+        <h3>Extra TidBits</h3>
+      </div>
+      <div class="tidbits-description">
+
+      </div>
     </div>
   </div>
+
 </body>
 </html>
