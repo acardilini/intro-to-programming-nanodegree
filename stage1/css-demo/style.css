@@ -1,0 +1,29 @@
+/* This is a CSS comment.*/
+
+
+/*
+Comments are only to help PEOPLE read a code file. The
+computer ignores them.
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+   outline: 1px solid red !important;
+}
+
+.app {
+  display: flex;
+}
+
+.screenshot {
+  max-width: 500px;
+}
+
+.description {
+  max-width: 600px;
+}
