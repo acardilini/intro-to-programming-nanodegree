@@ -243,7 +243,7 @@ of flexbox use. Some attributes that are important when using flexbox include:
   * justify-content
   * align-items
   * align-content
-* flex-direction
+* For the items;
   * order
   * flex-grow
   * flex-shrink
@@ -252,7 +252,7 @@ of flexbox use. Some attributes that are important when using flexbox include:
   * align-self
 
 #### Code, Test, Refine
-The Code, Test and Refine routine is a good way to work towards creating
+The Code, Test and Refine process is a good way to work towards creating
 a design you have been given. A good place to start this process is to:
 1. Boxifying the design.
 2. Look for repeated style and symatic elements, i.e. figure out what tags are required.
