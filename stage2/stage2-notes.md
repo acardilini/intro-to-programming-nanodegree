@@ -408,3 +408,17 @@ def random_noun():
   random_num
 
 ```
+
+## 2.5 How to Solve Problems
+An important guide to approaching problems is:
+0. Don't Panic!!
+1. What are the inputs?
+2. What are the outputs?
+3. Work through some examples by hand.
+4. Simple mechanical solutions.
+5. Don't optimize prematurely! Simple and correct is best, only optimize
+when you need to.
+
+Assertions should be added to programs in order to maintain assumptions. These
+can be included using `assert <expression>`. If the expression is incorrect
+it will jump out of the program as if an error has occurred.
