@@ -408,3 +408,88 @@ def random_noun():
   random_num
 
 ```
+
+
+
+### 2.6 Structured Data: Lists & For Loops
+Lists are a sequence of any elements and can be created using square brackets:
+e.g. `<LISTNAME> = ["<ELEMENT>", "<ELEMENT>"]`. This means that lists can
+contain strings, numbers and other lists. List can be sliced and accessed in
+the same way that strings can, by using index values.
+
+#### Nested Lists
+When a list is contained within a list it is still possible to access each
+element. To do this you must use indexing to select the list your are
+interested in and then use a second index to identify the element. For
+instance the following code prints the name of the capital of India.
+```python
+countries = [['China','Beijing',1350],
+             ['India','Delhi',1210],
+             ['Romania','Bucharest',21],
+             ['United States','Washington',307]]
+
+print countries[1][1]
+```
+
+#### Mutation
+It is possible to modify value of an element of a list after the list has
+been created. This can be done by selecting an element of a list and
+assigning a new value to this element.
+```python
+stooges = ['Moe','Larry','Curly']
+stooges[2] = 'Shemp'
+print(stooges)
+```
+When an element of a list is changed it will also effect the value
+of the element in any other variable it is linked to.
+
+
+
+The differences between a String and List include:
+1. List elements can contain more than just characters.
+2. Lists are mutable.
+
+#### Aliasing
+If two variable names refer to the same list object, any changes to one will
+also occur in the other.
+
+#### List Operations
+There are several useful list operators that allow you to work more easily
+with lists. Some of these include:
+* `<LIST>.append(<ELEMENT>)` adds a new element onto the end of a list.
+* `+` joins lists together, e.g. `[1,2] + [3,4]`
+* `len(<LIST>)` determines the length of a list, i.e. how many elements a
+list has.
+There is an important different between `append` and `+` that it is worth
+pointing out. Append adds a new element to the end of a list whereas `+` joins
+two lists together. If you append a list to another list then you will end up
+with a nested list.
+
+#### For Loops
+`for` statements allow you to iterate through a list of elements more
+easily than using a while loop. These statements have the following expression:
+```python
+for <NAME> in <LIST>:
+  <BLOCK>
+```
+Where `<NAME>` refers to each element within the list. The `for` loop starts
+witht the first element, runs through the `<BLOCK>` and then goes onto
+the next element, for all elements in the list. The following
+function uses a `for` loop to calculate the sum of a list of values:
+```python
+def sum_list(list):
+    sum = 0
+    for i in list:
+        sum = sum + i
+    return sum
+
+print sum_list([1,7,4])
+```
+The operation `<LIST>.index(<ELEMENT>)` returns the first place in
+a list that an element in found. The problem with `.index` is that it returns
+an error if the element you are trying to find is not in the list.
+An alternative method is to use the `in` operator which tells you whether
+an element is in a list by returning a boolean value. Another similar operator
+is `not it`.
+
+### How to Solve Problems

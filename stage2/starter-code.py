@@ -256,8 +256,12 @@ print median(7, 8, 7)
 
 
 
-# My first attempt at the mad_lib. The problem is it won't pick up multiple
-#instances of NOUN or VERB
+# Let's put it all together. Write code for the function process_madlib, which takes in
+# a string "madlib" and returns the string "processed", where each instance of
+# "NOUN" is replaced with a random noun and each instance of "VERB" is
+# replaced with a random verb. You're free to change what the random functions
+# return as verbs or nouns for your own fun, but for submissions keep the code the way it is!
+
 from random import randint
 
 def random_verb():
@@ -284,18 +288,16 @@ def word_transformer(word):
 
 def process_madlib(mad_lib):
     processed = ""
-    noun_start = mad_lib.find("NOUN")
-    noun_end = noun_start + len("NOUN")
-    verb_start = mad_lib.find("VERB")
-    verb_end = verb_start + len("VERB")
-    if noun_start != -1:
-        processed = mad_lib[:noun_start] + random_noun() + mad_lib[noun_end:]
-    else:
-        processed = mad_lib
-    if verb_start != -1:
-        processed = processed[:verb_start] + random_verb() + processed[verb_end:]
-    else:
-        processed = processed
+    i = 0
+    box_length = 4
+    while i < len(mad_lib):
+        frame = mad_lib[i:i+box_length]
+        to_add = word_transformer(frame)
+        processed = processed + to_add
+        if len(to_add) == 1:
+            i = i + 1
+        else:
+            i = i + 4
     return processed
     # your code here
     # you may find the built-in len function useful for this quiz
@@ -305,3 +307,113 @@ test_string_1 = "This is a good NOUN to use when you VERB your food"
 test_string_2 = "I'm going to VERB to the store and pick up a NOUN or two."
 print process_madlib(test_string_1)
 print process_madlib(test_string_2)
+
+
+# Lesson 2.6: Structured Data - Lists
+
+# Similar to how strings are seuqences of characters, lists are
+# sequences of anything! We can have lists of numbers, lists of
+# characters, even lists of lists! And we can mix up the contents
+# too so we can have lists containing many different things.
+
+# https://www.udacity.com/course/viewer#!/c-nd000/l-4180729266/m-48652460
+
+p = ['y', 'a', 'b', 'b', 'a', '!']
+print p
+print p[0]
+print p[2:4]
+
+# Add your own code and notes here
+
+stooges = ['Moe', 'Larry', 'Curly']
+
+# Days in Month
+# Given the variable,
+
+days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+# define a procedure, how_many_days,
+# that takes as input a number
+# representing a month, and returns
+# the number of days in that month.
+
+def how_many_days(n):
+    return days_in_month[n-1]
+
+
+print how_many_days(1)
+#>>> 31
+
+print how_many_days(9)
+#>>> 30
+
+
+spy = [0,0,7]
+def replace_spy(list):
+    list[2] = list[2]+1
+    return list
+print spy
+replace_spy(spy)
+print spy
+
+
+# Lesson 2.6: For Loops
+
+# For loops, like while loops, are useful for running a block of code
+# multiple times. For loops make iterating through elements in a list
+# easier than using a while loop.
+
+# https://www.udacity.com/course/viewer#!/c-nd000/l-4152219158/m-48204891
+
+def print_all_elements(p):
+    for e in p:
+        print e
+
+myList = [1, 2, [3, 4]]
+print_all_elements(myList)
+
+# Add your own code and notes here
+
+def sum_list(list):
+    sum = 0
+    for i in list:
+        sum = sum + i
+    return sum
+
+print sum_list([1,7,4])
+
+# Measure Udacity Quiz
+def measure_udacity(list):
+    sum = 0
+    for i in list:
+        if i[0] == 'U':
+            sum = sum + 1
+    return sum
+print measure_udacity(["Dave", "Sebastian", "Katy"])
+print measure_udacity(["Umika", "Umberto"])
+
+
+# Find Element Quiz
+def find_element(list, value):
+    i = 0
+    for e in list:
+        if e == value:
+            return index
+        i = i + 1
+    else:
+        return -1
+
+print find_element([1,2,3], 3)
+print find_element(["alpha", "beta"], "gamma")
+
+print [1,2,3].index(4)
+
+def find_element(list, value):
+    if value in list:
+        return list.index(value)
+    else:
+        return -1
+print find_element([1,2,3], 3)
+print find_element(["alpha", "beta"], "gamma")
+
+# Age in Days Problem
