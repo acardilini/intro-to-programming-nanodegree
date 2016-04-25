@@ -601,5 +601,110 @@ while i < len(count_list):
     spaces = len("number") - len(str(i))
     print " "*spaces + str(i) + " | " + "*"*count_list[i]
     i = i + 1
+```
 
+#### Quiz: Product list
+Define a procedure, product_list, that takes as input a list of numbers,
+and returns a number that is the result of multiplying all those numbers
+together.
+```python
+def product_list(list_of_numbers):
+    i = 0
+    product = 1
+    while i < len(list_of_numbers):
+        product = product * list_of_numbers[i]
+        i = i + 1
+    return product
+
+print product_list([9])
+
+print product_list([1,2,3,4])
+
+print product_list([])
+```
+
+#### Quiz: Greatest
+Define a procedure, greatest, that takes as input a list of positive numbers,
+and returns the greatest number in that list. If the input list is empty, the
+output should be 0.
+```python
+def greatest(list_of_numbers):
+    big = 0
+    i = 0
+    while i < len(list_of_numbers):
+        if list_of_numbers[i] > big:
+            big = list_of_numbers[i]
+        i = i + 1
+    return big
+
+print greatest([4,23,1, 24])
+print greatest([])
+```
+
+#### Quiz: Strings to lists
+Let's play around with one more string method: string.split(), which
+splits a string into a list of substrings, and returns it as a new list.
+Assign list_of_words1 to the split string1 and list_of_words2 to the split
+string2.
+
+`.split` automatically splits by space, but other characters can be used to
+split strings.
+```python
+string1 = "Yesterday, PERSON and I went to the PLACE. On our way, we saw a ADJECTIVE NOUN on a bike."
+string2 = "PLACE is located on the ADVERB side of Dublin, near the mainly ADJECTIVE areas of PLACE."
+list_of_words1 = string1.split()
+list_of_words2 = string2.split()
+
+print list_of_words1
+print list_of_words2
+```
+
+#### Quiz: Word in position
+Write code for the function word_in_pos (meaning word in parts_of_speech),
+which takes in a string word and a list parts_of_speech as inputs. If there is
+a word in parts_of_speech that is a substring of the variable word, then return
+that word in parts_of_speech, else return None.
+
+input = a string word
+      = a list of parts of speech we are interested in identifying
+output = return the word that is part of the parts in speech list, or none.
+
+What I did was:
+1. Take each parts in speech word we are looking for.
+2. Define it's length. This is necessary for matching words that are part of a string.
+3. Then we test whether our word matches the parts_of_speech word. If our word
+is longer than 'i' we will run through the string and see if any sub parts of
+it match 'i'.
+4. If it matches we return the word, else we return None.
+
+```python
+def word_in_pos(word, parts_of_speech):
+    for pos in parts_of_speech:
+        start = 0
+        end = start + len(pos)
+        while end <= len(word):
+            if word[start:end] == pos:
+                return word[start:end]
+            start = start + 1
+            end = end + 1
+    else:
+        return None
+
+test_cases = ["NOUN", "FALSE", "<<@PERSON><", "PLURALNOUN"]
+parts_of_speech = ["PERSON", "PLURALNOUN", "NOUN"]
+
+print word_in_pos(test_cases[0], parts_of_speech)
+print word_in_pos(test_cases[1], parts_of_speech)
+print word_in_pos(test_cases[2], parts_of_speech)
+print word_in_pos(test_cases[3], parts_of_speech)
+```
+
+My function is a lot longer than it needs to be because I forgot about the
+`in` argument. The same function can be written much more simply by:
+```python
+def word_in_pos(word, parts_of_speech):
+    for pos in parts_of_speech:
+      if pos in word:
+        return pos
+    return None
 ```
