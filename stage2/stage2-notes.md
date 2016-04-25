@@ -409,6 +409,7 @@ def random_noun():
 
 ```
 
+<<<<<<< HEAD
 
 
 ### 2.6 Structured Data: Lists & For Loops
@@ -493,3 +494,112 @@ an element is in a list by returning a boolean value. Another similar operator
 is `not it`.
 
 ### How to Solve Problems
+=======
+## 2.5 How to Solve Problems
+An important guide to approaching problems is:
+0. Don't Panic!!
+1. What are the inputs?
+2. What are the outputs?
+3. Work through some examples by hand.
+4. Simple mechanical solutions.
+5. Don't optimize prematurely! Simple and correct is best, only optimize
+when you need to.
+
+Assertions should be added to programs in order to maintain assumptions. These
+can be included using `assert <expression>`. If the expression is incorrect
+it will jump out of the program as if an error has occurred.
+>>>>>>> 4a9315f8d889f8c0d605d02dad775e9bd89762e3
+
+### Quizzes: Tips and hints
+* `+=` adds the next number to an object.
+
+#### Quiz: While Loop 2
+```python
+import random
+random_list = []
+list_length = 20
+
+while len(random_list) < list_length:
+  random_list.append(random.randint(0,10))    
+
+# My code.
+count = 0
+i = 0
+while i < 20:
+    if random_list[i] == 9:
+        count = count + 1
+        i = i + 1 # DONT NEED THIS SECTION!
+    i = i + 1
+#
+
+print random_list
+print count
+```
+
+#### Quiz: While Loop 3
+We now want to create a new list that contains the counts
+of all occurrances of every number seen in the randomly generated
+list. That means we want counts of all occurrences of all numbers
+from 0 through 10 in our randomly generated list.
+```python
+import random
+random_list = []
+list_length = 20
+while len(random_list) < list_length:
+  random_list.append(random.randint(0,10))
+
+# My code
+count_list = [0] * 11
+i = 0
+while i < 20:
+  # The answer inlcuded a variable 'number = random_list[i]' and put number in
+  # the code.
+  count_list[random_list[i]] = count_list[random_list[i]] + 1
+  i = i + 1
+#
+
+print count_list
+print sum(count_list)
+```
+
+#### Quiz: While Loop 4
+We want to create a nicely formatted table that shows the number and its
+corresponding count.
+* This is a nice quiz because it makes you think about the spacing required
+before the numbers are printed.
+```python
+import random
+
+random_list = []
+list_length = 20
+
+while len(random_list) < list_length:
+    random_list.append(random.randint(0,10))
+
+count_list = [0] * 11
+index = 0
+
+while index < len(random_list):
+    number = random_list[index]
+    count_list[number] = count_list[number] + 1
+    index = index + 1
+
+print index
+
+# My code
+i = 0
+print "number | occurences"
+while i < len(count_list):
+    spaces = len("number") - len(str(i))
+    print " "*spaces + str(i) + " | " + str(count_list[i])
+    i = i + 1
+
+# My code
+i = 0
+print "number | occurences"
+while i < len(count_list):
+    spaces = len("number") - len(str(i))
+    print " "*spaces + str(i) + " | " + "*"*count_list[i]
+    i = i + 1
+
+```
