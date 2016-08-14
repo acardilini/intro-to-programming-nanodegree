@@ -40,28 +40,38 @@ A good guide for approaching coding problems is:
 """
 
 make_me_think = """
-The internet is made up of a whole lot of __1__. The style of a HTML page is defined by the __2__ language. In order to 'speak' with the HTML page you need to identify each element using a __3__. The style of the element is then controlled by providing a value for the __4__ of the element you want to change.
+The internet is made up of a whole lot of __1__. The style of a HTML page is defined by the __2__ language. In order to 'speak' with the HTML page and style the elements you need to identify each element using a __3__. The style of the element is then controlled by providing a value for each __4__ of the element you want to change.
 
 """
 
 brain_sweats = """
-With the range of web browsing divices available, from desktops to smart phones, webpages must be __1__. A webpage should be built in a way that allows for __2__ positioning of its elements. Before celebrating a coding job well done it is important that you __3__ your code to check that everything works in different environments. Remembering the process of 'code, test & __4__' will help you build a functional webpage.
+With the range of web browsing divices available, from desktops to smart phones, webpages must be __1__. A webpage should be built in a way that allows for the __2__ positioning of its elements. Before celebrating a coding job well done it's important that you __3__ your code to check that everything works in different environments. Remembering the process of 'code, test & __4__' will help you build a functional webpage.
 
 """
 
 # Congatulations message
 congrats = """
-
-Congratulations, you got it right!!
+Congratulations, you got it right.
 
 """
 
 # Try again message
 try_again = """
+Ooops, try again.
 
+"""
+
+# Game over message
+game_over = """
 Sorry, that's not correct and you've run out of attempts!
 
 Have a think and try again later.
+
+"""
+
+# Game complete message
+game_complete = """
+Well done you've finish the game by filling in all of the words correctly!!!
 
 """
 
@@ -82,33 +92,27 @@ def play_game(ml_string, parts_of_speech, answer, preamble):
     answer_no = 0
     for word in ml_split:
         replacement = word_in_pos(word, parts_of_speech)
-        print word # TEST - DELETE
-        print parts_of_speech # TEST - DELETE
-
-        # Need to figure out how to print the paragraph with the correct word afte the user put in the correct word. This may require knowing the position of the word and replacing it in the origial ml_string.
-
         if replacement != None:
-            print " ".join(ml_split)
+            print ml_string
             attempt = guesses
             while attempt >= 1:
                 user_input = raw_input("What should " + replacement + " be replaced with? ")
                 if user_input == answer[answer_no]:
-                    word = word.replace(replacement, user_input)
-                    replaced.append(word)
+                    ml_string = ml_string.replace(replacement, user_input)
                     answer_no = answer_no + 1
-                    print """Congratulations, you got it right!!"""
+                    print congrats
                     break
                 if attempt == 1:
-                    print try_again
+                    print game_over
                     return
                 else:
-                    print "Ooops, try again."
+                    print try_again
                     attempt = attempt - 1
         else:
             replaced.append(word)
-    replaced = " ".join(replaced)
-    print replaced
-    return replaced
+    print ml_string
+    print game_complete
+    return ml_string
 
 # MY CODE
 # Choosing a game level.
