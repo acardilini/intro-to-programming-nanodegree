@@ -59,7 +59,7 @@ Congratulations, you got it right!!
 # Try again message
 try_again = """
 
-Sorry, you've run out of attempts! Perhaps your brain needs a rest.
+Sorry, that's not correct and you've run out of attempts!
 
 Have a think and try again later.
 
@@ -77,17 +77,18 @@ def word_in_pos(word, parts_of_speech):
 def play_game(ml_string, parts_of_speech, answer, preamble):
     guesses = int(raw_input(wrong_guesses_preamble))
     print preamble
-    print ml_string
     replaced = []
-    ml_string = ml_string.split()
+    ml_split = ml_string.split()
     answer_no = 0
-    for word in ml_string:
+    for word in ml_split:
         replacement = word_in_pos(word, parts_of_speech)
-        print word # TEST CODE - REMOVE!!
+        print word # TEST - DELETE
+        print parts_of_speech # TEST - DELETE
 
-        # Need to figure out how to print the paragraph with the correct word afte the user put in the correct word. This may require knowing the position of the word and replacing it in the origial ml_string. 
+        # Need to figure out how to print the paragraph with the correct word afte the user put in the correct word. This may require knowing the position of the word and replacing it in the origial ml_string.
 
         if replacement != None:
+            print " ".join(ml_split)
             attempt = guesses
             while attempt >= 1:
                 user_input = raw_input("What should " + replacement + " be replaced with? ")
