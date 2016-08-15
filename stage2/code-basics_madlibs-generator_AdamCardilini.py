@@ -1,8 +1,26 @@
+# Need to add "os" and "sys" libraries in order to exit the game when it ends
+import os
+import sys
+
+# Text asking for difficulty level
+what_difficulty = """
+Please choose how easy you want to take it - enter the corresponding number 1, 2 or 3:
+
+1. Warm Up, 2. Make Me Thinking or 3. Brain Sweats
+
+"""
+# Incorrect difficulty level
+difficulty_again = """
+Oops, thats not an option. Please try again :D
+
+"""
+
+
 # Text asking for number of wrong guesses.
 wrong_guesses_preamble = """
 It's up to you to decide if you want to make it even harder or easier. Type in the number of wrong guesses you allow yourself before you fail the game.
 
-  """
+"""
 
 # A list of replacement words to be passed in to the play game function.
 easy_preamble = """
@@ -85,16 +103,14 @@ def word_in_pos(word, parts_of_speech):
 # Plays a full game of mad_libs. A player is prompted to replace words in ml_string,
 # which appear in parts_of_speech with their own words.
 def play_game(ml_string, parts_of_speech, answer, preamble):
-    guesses = int(raw_input(wrong_guesses_preamble))
+    attempt = int(raw_input(wrong_guesses_preamble))
     print preamble
-    replaced = []
     ml_split = ml_string.split()
     answer_no = 0
     for word in ml_split:
         replacement = word_in_pos(word, parts_of_speech)
         if replacement != None:
             print ml_string
-            attempt = guesses
             while attempt >= 1:
                 user_input = raw_input("What should " + replacement + " be replaced with? ")
                 if user_input == answer[answer_no]:
@@ -102,33 +118,29 @@ def play_game(ml_string, parts_of_speech, answer, preamble):
                     answer_no = answer_no + 1
                     print congrats
                     break
-                if attempt == 1:
+                elif attempt == 1:
                     print game_over
-                    return
-                else:
-                    print try_again
-                    attempt = attempt - 1
-        else:
-            replaced.append(word)
+                    sys.exit()
+                print try_again
+                attempt = attempt - 1
     print ml_string
     print game_complete
-    return ml_string
+    sys.exit()
 
 # MY CODE
 # Choosing a game level.
 def game_choice():
-    difficulty = raw_input("""
-Please choose how easy you want to take it - enter the corresponding number 1, 2 or 3:
-
- 1. Warm Up, 2. Make Me Thinking or 3. Brain Sweats
-
-  """)
+    difficulty = raw_input(what_difficulty)
 
     if difficulty == "1":
         play_game(warm_up, parts_of_easy, easy_answer, easy_preamble)
-    if difficulty == "2":
+    elif difficulty == "2":
         play_game(make_me_think, parts_of_medium, medium_answer, meadium_preamble)
-    if difficulty == "3":
+    elif difficulty == "3":
         play_game(brain_sweats, parts_of_hard, hard_answer, hard_preamble)
+    else:
+        os.system('cls')
+        print difficulty_again
+        game_choice()
 
 print game_choice()
