@@ -87,3 +87,19 @@ The instructors code is better optimised than mine because it has less lines and
 
 #### What is a class?
 A class contains information that can be used to create an object, e.g. a Turtle. We can use a class to create multiple instances of the object. It's useful to think of a class as a blueprint with the objects being different buildings being created from the one blueprint.
+
+#### Drawing a circle from squares
+To create a circle made of squares we want to draw our square multiple times, but we will need to turn slightly between each square. To do this we can draw our square as normal, turn, and draw another square. The following code does this:
+```python
+for i in (1,37):
+  draw.square(sarah)
+  sarah.right(10)
+```
+
+#### Calling classes
+Calling classes might look similar to calling functions but has a different outcome. For instance, when calling `turtle.Turtle()` we are calling a class which in-turn calls the class function `init` which initialises space in memory that didn't exist before.
+
+### Use Classes - Send Texts
+To do this section of the course we need to install 'twilio' a package that allows you to send phone messages.
+
+When I first attempted to install twilio I used the following code `sudo easy_install twilio`. This did not work because my computer automatically uses version 3 of python rather than version 2. So twilio was installed on version 3 but not 2. To fix this issue I had to use the python2 version of easy_install-2.7 to install twilio, e.g. `sudo easy_install-2.7 twilio`.
