@@ -1,18 +1,24 @@
 README
 
-
 Required:
 Python2.7 installation
 Access to the internet
 
-
 Included:
 media.py - specifies the class movie
 fresh_tomatoes - writes HTML file taking in instances of class
-entertainment_centre.py - defines instances of class movie, calls fresh tomatoes and creates html page
+entertainment_centre.py - constructs instances of class movie, calls fresh tomatoes and creates html page
 best_speech_image.png - cropped image for best_speech poster_image
 the README
 
+Class Movie
+----------------
+Defines five instance variables including:
+title = movie_title
+storyline = movie_storyline
+poster_image_url = poster_image
+trailer_youtube_url = trailer_youtube
+duration = movie_duration
 
 Create Fresh Tomatoes HTML
 ----------------
