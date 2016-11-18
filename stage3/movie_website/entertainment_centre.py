@@ -13,7 +13,6 @@ forks_over_knives = media.Movie("Forks Over Knives", "WARNING: This movie could 
 
 speciesism = media.Movie("Speciesism: The Movie", "You'll never look at animals the same way again. Especially humans.", "http://t0.gstatic.com/images?q=tbn:ANd9GcRl2Xc0SEv5Bd_tSPkr-DzhvVSNWRgh0ubR9gtUWlT44nrsJknu", "https://www.youtube.com/watch?v=tJYzia6KUbs", "1h 34m")
 
-lucent = media.Movie("Lucent", "Shining a light of Australian pig farming.", "https://www.google.com.au/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiTyK_wqrPQAhWIW5QKHUDqBd8QjBwIBA&url=http%3A%2F%2Fwww.aussiepigs.com%2Fimages%2Flucent%2FPoster4.jpg&bvm=bv.139250283,d.dGo&psig=AFQjCNFYxuqn6kyJL1Jj8XTQolLsB1T-GA&ust=1479593874579290", "https://vimeo.com/104075198", "1h 47m")
 
 movies = [earthlings, bold_native, cowspiracy, best_speech, forks_over_knives, speciesism]
 
