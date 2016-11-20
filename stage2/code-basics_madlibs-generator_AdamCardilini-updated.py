@@ -100,13 +100,8 @@ def word_in_pos(word, parts_of_speech):
             return pos
     return None
 
-# Plays a full game of mad_libs. A player is prompted to replace words in ml_string,
-# which appear in parts_of_speech with their own words.
-def play_game(ml_string, parts_of_speech, answer, preamble):
-    attempt = int(raw_input(wrong_guesses_preamble))
-    print preamble
-    ml_split = ml_string.split()
-    answer_no = 0
+# Runs the guts of the game by looping though replacement strings and attempts.
+def run_game(ml_split, parts_of_speech, ml_string, attempt, answer, answer_no):
     for word in ml_split:
         replacement = word_in_pos(word, parts_of_speech)
         if replacement != None:
@@ -123,7 +118,18 @@ def play_game(ml_string, parts_of_speech, answer, preamble):
                     sys.exit()
                 print try_again
                 attempt = attempt - 1
-    print ml_string, game_complete
+    print ml_string
+
+
+# Plays a full game of mad_libs. A player is prompted to replace words in ml_string,
+# which appear in parts_of_speech with their own words.
+def play_game(ml_string, parts_of_speech, answer, preamble):
+    attempt = int(raw_input(wrong_guesses_preamble))
+    print preamble
+    ml_split = ml_string.split()
+    answer_no = 0
+    run_game(ml_split, parts_of_speech, ml_string, attempt, answer, answer_no)
+    print game_complete
     sys.exit()
 
 # MY CODE
