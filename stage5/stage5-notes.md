@@ -102,3 +102,173 @@ console.log(formattedRole);
 You may have noticed that we use `.prepend()` for addomg the new variables. That's because `.append()` only adds things to the end of an element and we wanted to add our name and role to the beginning of the `#header` element. We can add variables to the beginning of an element by using `.prepend()`.
 
 The order is also important with role first then name, because `.prepend()` will add variables to the beginning of an element in the order that they are coded. This means that formattedName, which is added later, actually is prepended in front of formattedRole.
+
+#### Manipulating arrays in JavaScript
+Arrays is javascript are like lists in python. Arrays are created as follows:
+
+```javascript
+var arrayName = ["dog", "cat", "rat"]
+```
+
+There are several useful functions for manipulating arrays in javascript. A list of these can be
+found on the Mozilla Developer Network (MDN) site under [Array][https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array]. A couple of particularly useful functions include:
+
+```javascript
+var ages = [27, 29, 30];
+
+// To determine the length of an array
+console.log(ages.length);
+
+// Remove the last element of an array and return it.
+var kimAge = ages.pop();
+console.log(kimAge);
+console.log(ages);
+
+// Add elements to the end of an array and returns the array length.
+var agesOthers = ages.push(33, 35);
+console.log(agesOthers);
+console.log(ages);
+```
+
+#### Manipulating strings in JavaScript
+There are several useful functions for manipulating strings in javascript. A list of these can be
+found on the Mozilla Developer Network (MDN) site under [String][https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String]. A couple of particularly useful functions include:
+
+```javascript
+// To access characters is a string
+return 'string'.charAt(2); // returns 'r'
+return 'string'.charAt[2];
+
+// To change the case of a string so the following string is Adam CARDILINI.
+var name = "adAm CaRDiLiNI";
+console.log(name);
+
+var names = name.split(" ");
+console.log(names);
+
+var firstName = names[0].toLowerCase();
+console.log(firstName);
+
+var lastName = names[names.length - 1].toUpperCase();
+console.log(lastName)
+
+```
+
+The two pieces of code both convert a name to have a standard format 'First LAST'. The first piece of code is one that I wrote, the second piece of code is what the course provided as the answer.
+
+```javascript
+// My code
+var name = "AlbERt EINstEiN";
+
+function nameChanger(oldName) {
+    var finalName = oldName;
+
+    // Split name into an array to work on first and last separately
+    var names = finalName.split(" ");
+
+    // Convert first name to lower case and then first letter of the name to upper case
+    var firstName = names[0].toLowerCase();
+    firstName = firstName[0].toUpperCase() + firstName.slice(1, firstName.length);
+
+    // Convert last name to upper case
+    var lastName = names[names.length - 1].toUpperCase();
+
+    finalName = firstName + " " + lastName;
+    return finalName;
+};
+
+// Did your code work? The line below will tell you!
+console.log(nameChanger(name));
+
+// Their code
+function nameChanger(oldName) {
+    var finalName = oldName;
+    var names = oldName.split(" ");
+    names[1] = names[1].toUpperCase();
+    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
+    finalName = names.join(" ");
+    return finalName;
+}
+```
+
+There code is much simpler an cleaner. They manipulate the array elements rather than creating new variables, the chain functions and they use the `join()` function which is nice.
+
+#### Object literal notation
+Javascript dose not include classes, it only has objects. The following code creates an object because the curly braces indicate we are using object literal notation.
+
+```javascript
+var bio = {
+  "name": "Adam";
+  "age": 29;
+  "skills": python;
+};
+```
+
+If we then wanted to access particular properties of an object and append it to a page we would use the following code:
+
+```javascript
+var bio = {
+  "name": "Adam",
+  "age": 29,
+  "skills": python
+};
+
+$("#main").append(bio.name);
+```
+
+It's possible to add new properties to an object using dot notation or bracket notation. For example, if I wanted to add my email to the bio object I could do the following:
+
+```javascript
+// Dot notation
+bio.email = "a.cardilini@gmail.com"
+
+// Bracket notation
+bio["email"] = "a.cardilini@gmail.com"
+```
+This doesn't require the creation of a new variable.
+
+#### JSON
+JSON (JavaScript Object Notation) is a format for transferring and storing nesters or hierarchical data, meaning that objects (or other types of data) can be embedded in other objects. [This][https://www.copterlabs.com/json-what-it-is-how-it-works-how-to-use-it/] is a good explainer of JSON.
+
+We can create JSONs using a mix of nested square and curly brackets which can lead to easy mistakes. Luckily there are software called JSON linter that check your JSONs and find any pesky syntax errors, e.g. [jsonlint.com][http://jsonlint.com/]. The Atom text editor also highlights errors which is helpful.
+
+```javascript
+// Examples of JSONs
+// Simple JSON and access
+var adam = {
+  "age" = "29",
+  "city" = "Melbourne, Vic",
+  "gender" = "male"
+};
+console.log(adam.age)
+
+// JSON arrays
+var family = [{
+  "name" = "Adam",
+  "age" = "29",
+  "gender" = "male"
+},
+{
+  "name" = "Jess",
+  "age" = "27",
+  "gender" = "female"
+}];
+console.log(family[2].name); // output: Jess
+
+// Nesting JSON data
+var family = {
+  "adam": {
+    "name" = "Adam",
+    "age" = "29",
+    "gender" = "male"
+  },
+  "jess" = {
+    "name" = "Jess",
+    "age" = "27",
+    "gender" = "female"
+  }
+};
+console.log(family.jess.name) // output: Jess
+```
+
+JSON is important because it allows us to quickly and asychronously load data without having to re-render a page.
